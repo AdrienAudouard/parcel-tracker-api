@@ -1,6 +1,6 @@
 {
   "name": "parcel-tracker-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parcel tracker for Node.js",
   "keywords": [
     "parcel",
@@ -34,7 +34,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node sandbox/server.js"
+    "start": "node sandbox/server.js",
+    "publish": "npm publish"
   },
   "author": "Adrien Audouard",
   "license": "MIT",

@@ -4,7 +4,7 @@ import {TrackerConfig} from "./apis/tracker-config";
 import RequestService from './apis/request-service';
 import {ParcelInformations} from "./apis/parcel-informations";
 
-export default class Tracker {
+class Tracker {
     config: TrackerConfig;
 
     constructor(config: TrackerConfig = {}) {
@@ -56,3 +56,6 @@ export default class Tracker {
         return carriersFound;
     }
 }
+
+export { Tracker };
+export default { Tracker };

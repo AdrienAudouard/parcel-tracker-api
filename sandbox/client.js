@@ -1,7 +1,7 @@
-const Tracker = require('../dist/index').default;
+const {Tracker} = require('../dist/index');
 
 const config = {
-    enableCrossOrigin: false,
+    enableCrossOrigin: true,
     apiKeys: {
         laPoste: '',
         DHL: ''

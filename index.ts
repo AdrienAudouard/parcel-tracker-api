@@ -1,1 +1,5 @@
-export * from './lib/tracker';
+import {Tracker} from './lib/tracker';
+
+export {
+    Tracker
+};

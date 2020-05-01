@@ -1,10 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./lib/tracker"));
+var tracker_1 = require("./lib/tracker");
+exports.Tracker = tracker_1.Tracker;
 
 },{"./lib/tracker":9}],2:[function(require,module,exports){
 "use strict";
@@ -248,9 +246,19 @@ var Tracker = /** @class */ (function () {
         if (config === void 0) { config = {}; }
         this.config = config;
     }
+    /**
+     * Return all available carriers
+     */
     Tracker.prototype.getCarriersList = function () {
         return Object.keys(carriers_1.Carriers);
     };
+    /**
+     * Return tracking informations for a given tracking number and carrier
+     * @param trackingNumber Tracking number
+     * @param carrier Carrier name
+     * @param options Tracking configaration can be optionnal, override the default config
+     * @return {Promise<ParcelInformations>} parcel's informations
+     */
     Tracker.prototype.getTrackingInformations = function (trackingNumber, carrier, options) {
         if (options === void 0) { options = {}; }
         var carrierApi = carriers_1.Carriers[carrier];
@@ -260,6 +268,11 @@ var Tracker = /** @class */ (function () {
         }
         return request_service_1.default.makeRequest(carrierApi, trackingNumber, requestConfig);
     };
+    /**
+     * Return the possible carriers for a given tracking numbe
+     * @param trackingNumber Tracking number
+     * @return {Array<string>} possible carriers founds
+     */
     Tracker.prototype.getCarrier = function (trackingNumber) {
         var carriers = Object.keys(carriers_1.Carriers);
         var carriersFound = [];
@@ -274,7 +287,8 @@ var Tracker = /** @class */ (function () {
     };
     return Tracker;
 }());
-exports.default = Tracker;
+exports.Tracker = Tracker;
+exports.default = { Tracker: Tracker };
 
 },{"./apis/request-service":2,"./carriers":6}],10:[function(require,module,exports){
 "use strict";
@@ -2683,10 +2697,10 @@ var XmlEntities = /** @class */ (function () {
 exports.XmlEntities = XmlEntities;
 
 },{}],43:[function(require,module,exports){
-const Tracker = require('../dist/index').default;
+const {Tracker} = require('../dist/index');
 
 const config = {
-    enableCrossOrigin: false,
+    enableCrossOrigin: true,
     apiKeys: {
         laPoste: 'Q3kDbaq+r73FmR+FGP9kP+MhKQQ10z5F34tcQBQc0dlhJIb2WJ8Tnt7OB7NL/A4C',
         DHL: 'yG3nXMO0PYqJ9ZDVyzieWotnPJHuCEQi'
