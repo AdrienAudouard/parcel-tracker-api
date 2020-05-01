@@ -34,7 +34,7 @@ import Tracker from('parcel-tracker-api');
   * @param {**string**} **trackingNumber**:  Tracking number
   * @param {**string**} **carrier**: Carrier name
   * @param {**TrackerConfig**} **config**: Tracking configaration can be optionnal
-  * return {**ParcelInformations**} parcel's informations
+  * @return {**ParcelInformations**} parcel's informations
 
 ````javascript
 const config = {
@@ -68,4 +68,25 @@ const tracker = new Tracker(config);
 tracker.getTrackingInformations('TRACKING_NUMBER', 'DHL', specificOne).then((response) => {
     // DO WORK
 })
+````
+
+### getCarrier(trackingNumber)
+* Return the possible carriers for a given tracking number
+  * @param {**string**} **trackingNumber**:  Tracking number
+  * @return {**Array<string>**} possible carriers founds
+ 
+ ````javascript
+const tracker = new Tracker();
+
+tracker.getCarrier('1Z9999999999999999') // => ['UPS']
+````
+
+### getCarriersList()
+* Return all available carriers
+  * @return {**Array<string>**} carriers
+
+ ````javascript
+const tracker = new Tracker();
+
+tracker.getCarriersList() // => ['UPS', 'DHL', 'Colissimo', ...]
 ````
