@@ -1,4 +1,5 @@
 # Parcel Tracker Api
+[![npm version](https://img.shields.io/npm/v/parcel-tracker-api.svg?style=flat-square)](https://www.npmjs.org/package/parcel-tracker-api)
 
 Parcel tracker for Node.js
 
