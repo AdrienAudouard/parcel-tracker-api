@@ -1,10 +1,20 @@
 {
   "name": "parcel-tracker-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Parcel tracker for Node.js",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/AdrienAudouard/parcel-tracker-api/issues"
+  },
+  "homepage":"https://github.com/AdrienAudouard/parcel-tracker-api#readme",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "directories": {
     "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrienAudouard/parcel-tracker-api"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +22,7 @@
     "start": "node sandbox/server.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/date-and-time": "^0.6.0",
     "typescript": "^3.8.3"

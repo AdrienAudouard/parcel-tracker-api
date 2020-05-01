@@ -2685,7 +2685,6 @@ exports.XmlEntities = XmlEntities;
 },{}],43:[function(require,module,exports){
 const Tracker = require('../dist/index').default;
 
-
 const config = {
     enableCrossOrigin: false,
     apiKeys: {

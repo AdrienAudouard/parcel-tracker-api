@@ -1,11 +1,10 @@
 const Tracker = require('../dist/index').default;
 
-
 const config = {
     enableCrossOrigin: false,
     apiKeys: {
-        laPoste: '',
-        DHL: ''
+        laPoste: 'Q3kDbaq+r73FmR+FGP9kP+MhKQQ10z5F34tcQBQc0dlhJIb2WJ8Tnt7OB7NL/A4C',
+        DHL: 'yG3nXMO0PYqJ9ZDVyzieWotnPJHuCEQi'
     }
 };
 
