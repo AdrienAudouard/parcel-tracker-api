@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Parcel Tracker API</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <style type="text/css">
+        pre {
+            max-height: 200px;
+            min-height: 39px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body class="container">
+<h1>Parcel Tracker API</h1>
+
+<div class="well">
+    <h3>Input</h3>
+    <form role="form" onsubmit="return false;">
+        <div class="form-group">
+            <label for="tracking-number">Tracking number</label>
+            <input id="tracking-number" type="text" class="form-control" placeholder=""/>
+        </div>
+        <div class="form-group">
+            <label for="carrier-list">Carrier</label>
+            <select id="carrier-list" class="form-control">
+                <option value=""></option>
+            </select>
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Get data</button>
+        <button id="carrier-button" type="submit" class="btn btn-primary">Get carrier</button>
+    </form>
+</div>
+
+<div class="well">
+    <h3>Carrier</h3>
+    <pre id="carrier">No Data</pre>
+</div>
+
+<div class="well">
+    <h3>Response</h3>
+    <pre id="response" style="max-height: none">No Data</pre>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>

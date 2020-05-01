@@ -1,0 +1,16 @@
+# Installation
+> `npm install --save @types/date-and-time`
+
+# Summary
+This package contains type definitions for date-and-time ( https://github.com/knowledgecode/date-and-time ).
+
+# Details
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/date-and-time
+
+Additional Details
+ * Last updated: Fri, 01 Mar 2019 01:31:01 GMT
+ * Dependencies: none
+ * Global values: none
+
+# Credits
+These definitions were written by Daniel Plisetsky <https://github.com/danplisetsky>.
