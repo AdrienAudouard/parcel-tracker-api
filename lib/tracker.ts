@@ -26,7 +26,7 @@ export default class Tracker {
         return RequestService.makeRequest(carrierApi, trackingNumber, requestConfig);
     }
 
-    getCourier(trackingNumber: string): string[] {
+    getCarrier(trackingNumber: string): string[] {
         const carriers = Object.keys(Carriers);
         const carriersFound = [];
 

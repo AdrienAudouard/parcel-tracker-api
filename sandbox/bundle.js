@@ -260,7 +260,7 @@ var Tracker = /** @class */ (function () {
         }
         return request_service_1.default.makeRequest(carrierApi, trackingNumber, requestConfig);
     };
-    Tracker.prototype.getCourier = function (trackingNumber) {
+    Tracker.prototype.getCarrier = function (trackingNumber) {
         var carriers = Object.keys(carriers_1.Carriers);
         var carriersFound = [];
         for (var _i = 0, carriers_2 = carriers; _i < carriers_2.length; _i++) {
