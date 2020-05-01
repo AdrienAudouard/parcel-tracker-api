@@ -1,8 +1,23 @@
 {
   "name": "parcel-tracker-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parcel tracker for Node.js",
-  "keywords": [],
+  "keywords": [
+    "parcel",
+    "track",
+    "tracker",
+    "api",
+    "delivery",
+    "shipment",
+    "status",
+    "shopping",
+    "shipping",
+    "dhl",
+    "ups",
+    "colissimo",
+    "la poste",
+    "chronopost"
+  ],
   "bugs": {
     "url": "https://github.com/AdrienAudouard/parcel-tracker-api/issues"
   },
@@ -21,7 +36,7 @@
     "build": "tsc",
     "start": "node sandbox/server.js"
   },
-  "author": "",
+  "author": "Adrien Audouard",
   "license": "MIT",
   "devDependencies": {
     "@types/date-and-time": "^0.6.0",
