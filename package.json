@@ -1,6 +1,6 @@
 {
   "name": "parcel-tracker-api",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Parcel tracker for Node.js",
   "keywords": [
     "parcel",
@@ -39,7 +39,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node sandbox/server.js",
-    "publish": "npm publish"
+    "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "author": "Adrien Audouard",
   "license": "MIT",
