@@ -25,7 +25,7 @@ export const UPS = {
     id: 'UPS',
     needApiKey: false,
     regex: /\b(1Z ?[0-9A-Z]{3} ?[0-9A-Z]{3} ?[0-9A-Z]{2} ?[0-9A-Z]{4} ?[0-9A-Z]{3} ?[0-9A-Z]|[\dT]\d\d\d ?\d\d\d\d ?\d\d\d)\b/, // https://www.ups.com/fr/fr/tracking/help/tracking/tnh.page
-    path: 'https://wwwapps.ups.com/track/api/Track/GetStatus?loc=fr_FR',
+    getPath: trackingNumber => 'https://wwwapps.ups.com/track/api/Track/GetStatus?loc=fr_FR',
     method: 'POST',
     getBody: (trackingNumber: string) => {
         return {

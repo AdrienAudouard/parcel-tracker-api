@@ -8,7 +8,7 @@ export declare const Colissimo: {
         'X-Okapi-Key': string;
     };
     method: string;
-    path: string;
+    getPath: (trackingNumber: string) => string;
     id: string;
     regex: RegExp;
 };

@@ -7,6 +7,6 @@ export declare const LaPoste: {
         'X-Okapi-Key': string;
     };
     method: string;
-    path: string;
+    getPath: (trackingNumber: string) => string;
     responseMapper: (response: any) => ParcelInformations;
 };

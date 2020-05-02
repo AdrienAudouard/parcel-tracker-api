@@ -23,7 +23,7 @@ var RequestService = /** @class */ (function () {
     };
     RequestService.prototype.createAxiosConfig = function (carrier, trackingNumber, apiKey, options) {
         var body = carrier.method !== 'GET' ? carrier.getBody(trackingNumber) : {};
-        var url = carrier.method === 'GET' ? carrier.path + trackingNumber : carrier.path;
+        var url = carrier.getPath(trackingNumber);
         var config = {
             method: carrier.method,
             url: url,

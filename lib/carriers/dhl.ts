@@ -3,7 +3,7 @@ import {ParcelEvent} from "../apis/parcel-informations";
 
 export const DHL = {
     id: 'DHL',
-    path: 'https://api-eu.dhl.com/track/shipments?trackingNumber=',
+    getPath: trackingNumber => `https://api-eu.dhl.com/track/shipments?trackingNumber=${trackingNumber}`,
     needApiKey: true,
     apiKey: 'DHL',
     method: 'GET',

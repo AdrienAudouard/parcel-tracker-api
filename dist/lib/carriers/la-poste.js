@@ -10,7 +10,7 @@ exports.LaPoste = {
         };
     },
     method: 'GET',
-    path: 'https://api.laposte.fr/suivi/v2/idships/',
+    getPath: function (trackingNumber) { return 'https://api.laposte.fr/suivi/v2/idships/' + trackingNumber; },
     responseMapper: function (response) {
         var events = response.shipment.event.map(function (event) {
             return { label: event.label, date: new Date(event.date) };

@@ -5,8 +5,8 @@ export interface Carrier {
     regex: RegExp;
     needApiKey: boolean;
     apiKey?: string;
-    path: string;
-    method: string;
+    getPath: (trackingNumber: string) => string;
+    method: 'GET' | 'POST';
     getBody: (trackingNumber: string) => {};
     responseMapper: (response: any) => ParcelInformations;
     getHeaders: (apiKey?: string) => any;

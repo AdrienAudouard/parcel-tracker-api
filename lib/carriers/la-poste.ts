@@ -10,7 +10,7 @@ export const LaPoste = {
         }
     },
     method: 'GET',
-    path: 'https://api.laposte.fr/suivi/v2/idships/',
+    getPath: (trackingNumber: string) => 'https://api.laposte.fr/suivi/v2/idships/' + trackingNumber,
     responseMapper: (response: any) => {
         const events = response.shipment.event.map((event: any) => {
             return {label: event.label, date: new Date(event.date)} as ParcelEvent;

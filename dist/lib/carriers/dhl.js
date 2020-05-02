@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DHL = {
     id: 'DHL',
-    path: 'https://api-eu.dhl.com/track/shipments?trackingNumber=',
+    getPath: function (trackingNumber) { return "https://api-eu.dhl.com/track/shipments?trackingNumber=" + trackingNumber; },
     needApiKey: true,
     apiKey: 'DHL',
     method: 'GET',

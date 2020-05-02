@@ -9,7 +9,7 @@ export declare const Carriers: {
             'X-Okapi-Key': string;
         };
         method: string;
-        path: string;
+        getPath: (trackingNumber: string) => string;
         id: string;
         regex: RegExp;
     };

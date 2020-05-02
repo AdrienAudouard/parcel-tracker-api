@@ -3,8 +3,9 @@ const {Tracker} = require('../dist/index');
 const config = {
     enableCrossOrigin: true,
     apiKeys: {
-        laPoste: '',
-        DHL: ''
+        laPoste: 'API_KEY',
+        DHL: 'API_KEY',
+        royalMail: 'CLIENT_ID;CLIENT_SCRET',
     }
 };
 
@@ -26,7 +27,7 @@ window.onload = () => {
     }
 
     getCarrierButton.onclick = () => {
-        carrierDiv.innerHTML = tracker.getCourier(trackingNumberInput.value);
+        carrierDiv.innerHTML = tracker.getCarrier(trackingNumberInput.value);
     };
 
     getInformationButton.onclick = () => {

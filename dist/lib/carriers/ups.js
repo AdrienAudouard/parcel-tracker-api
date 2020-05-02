@@ -20,7 +20,7 @@ exports.UPS = {
     id: 'UPS',
     needApiKey: false,
     regex: /\b(1Z ?[0-9A-Z]{3} ?[0-9A-Z]{3} ?[0-9A-Z]{2} ?[0-9A-Z]{4} ?[0-9A-Z]{3} ?[0-9A-Z]|[\dT]\d\d\d ?\d\d\d\d ?\d\d\d)\b/,
-    path: 'https://wwwapps.ups.com/track/api/Track/GetStatus?loc=fr_FR',
+    getPath: function (trackingNumber) { return 'https://wwwapps.ups.com/track/api/Track/GetStatus?loc=fr_FR'; },
     method: 'POST',
     getBody: function (trackingNumber) {
         return {

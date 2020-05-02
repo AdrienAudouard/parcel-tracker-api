@@ -29,7 +29,7 @@ class RequestService {
 
     private createAxiosConfig(carrier: Carrier, trackingNumber: string, apiKey: string, options: TrackerConfig) {
         const body = carrier.method !== 'GET' ? carrier.getBody(trackingNumber) : {};
-        const url = carrier.method === 'GET' ? carrier.path + trackingNumber : carrier.path;
+        const url = carrier.getPath(trackingNumber);
 
         const config = {
             method: carrier.method,
