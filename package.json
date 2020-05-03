@@ -1,6 +1,6 @@
 {
   "name": "parcel-tracker-api",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Parcel tracker for Node.js",
   "keywords": [
     "parcel",
@@ -16,6 +16,7 @@
     "ups",
     "colissimo",
     "la poste",
+    "laposte",
     "chronopost",
     "royalmail",
     "royal",

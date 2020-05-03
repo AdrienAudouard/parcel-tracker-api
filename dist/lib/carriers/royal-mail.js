@@ -29,7 +29,9 @@ exports.RoyalMail = {
         return {
             carrier: 'Royal Mail',
             isDelivered: response.mailPieces.summary.statusCategory === 'DELIVERED' || response.mailPieces.summary.statusCategory === 'delivered',
-            events: events
+            events: events,
+            trackingNumber: '',
+            raw: response
         };
     },
 };

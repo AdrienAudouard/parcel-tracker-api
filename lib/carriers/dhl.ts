@@ -34,7 +34,9 @@ export const DHL = {
         return {
             carrier: 'DHL',
             isDelivered: response.shipments[0].status.statusCode === 'delivered',
-            events
+            events,
+            trackingNumber: '',
+            raw: response
         };
     },
 } as Carrier;

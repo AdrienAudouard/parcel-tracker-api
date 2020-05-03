@@ -18,6 +18,8 @@ function mapResponse(response: any): ParcelInformations {
         carrier: UPS.id,
         isDelivered: response.trackDetails[0].progressBarType === 'Delivered',
         events,
+        trackingNumber: '',
+        raw: response
     };
 }
 

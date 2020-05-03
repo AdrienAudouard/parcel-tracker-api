@@ -22,8 +22,9 @@ class RequestService {
                 }
 
                 mapped.trackingNumber = trackingNumber;
+                mapped.raw = data;
 
-                return mapped;
+                return mapped as ParcelInformations;
             })
     }
 

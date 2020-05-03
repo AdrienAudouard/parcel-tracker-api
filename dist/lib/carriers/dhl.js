@@ -30,7 +30,9 @@ exports.DHL = {
         return {
             carrier: 'DHL',
             isDelivered: response.shipments[0].status.statusCode === 'delivered',
-            events: events
+            events: events,
+            trackingNumber: '',
+            raw: response
         };
     },
 };

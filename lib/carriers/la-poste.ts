@@ -3,10 +3,10 @@ import {ParcelEvent, ParcelInformations} from "../apis/parcel-informations";
 export const LaPoste = {
     needApiKey: true,
     apiKey: 'laPoste',
-    getHeaders:(apiKey: string) => {
+    getHeaders: (apiKey: string) => {
         return {
             Accept: 'application/json',
-                'X-Okapi-Key': apiKey,
+            'X-Okapi-Key': apiKey,
         }
     },
     method: 'GET',
@@ -16,6 +16,10 @@ export const LaPoste = {
             return {label: event.label, date: new Date(event.date)} as ParcelEvent;
         });
 
-        return {isDelivered: response.shipment.isFinal, events} as ParcelInformations;
+        return {
+            isDelivered: response.shipment.isFinal,
+            events, trackingNumber: '',
+            raw: response
+        } as ParcelInformations;
     },
 }

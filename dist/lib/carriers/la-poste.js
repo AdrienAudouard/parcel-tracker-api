@@ -15,6 +15,10 @@ exports.LaPoste = {
         var events = response.shipment.event.map(function (event) {
             return { label: event.label, date: new Date(event.date) };
         });
-        return { isDelivered: response.shipment.isFinal, events: events };
+        return {
+            isDelivered: response.shipment.isFinal,
+            events: events, trackingNumber: '',
+            raw: response
+        };
     },
 };

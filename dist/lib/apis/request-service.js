@@ -18,6 +18,7 @@ var RequestService = /** @class */ (function () {
                 mapped.entryDate = mapped.events[mapped.events.length - 1].date;
             }
             mapped.trackingNumber = trackingNumber;
+            mapped.raw = data;
             return mapped;
         });
     };
